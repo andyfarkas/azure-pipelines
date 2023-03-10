@@ -6,7 +6,7 @@ trigger:
 - master
 
 pool:
-name: MyPool
+  name: MyPool
 
 resources:
   repositories: 
