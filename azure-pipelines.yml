@@ -8,17 +8,8 @@ trigger:
 pool:
   name: MyPool
 
-resources:
-  repositories: 
-  - repository: self
-  containers:
-  - container: runner
-    image: andyfarkas/test-runner
-
 variables:
   tag: '$(Build.BuildId)'
 
 steps:
-- script: echo "I can run inside the container (it starts by default)"
-  target:
-    container: runner
+- script: docker run -rm andyfarkas/test-runner
