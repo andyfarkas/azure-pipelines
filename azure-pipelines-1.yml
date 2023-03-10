@@ -1,3 +1,6 @@
+pool:
+  name: MyPool
+
 jobs:
 - job: MyJob
   displayName: My First Job
