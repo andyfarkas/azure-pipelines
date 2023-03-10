@@ -12,4 +12,9 @@ variables:
   tag: '$(Build.BuildId)'
 
 steps:
-- script: docker run --rm andyfarkas/test-runner
+- script: docker run --rm -v $(Build.SourcesDirectory)/tests-output:/tests andyfarkas/test-runner
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
+    searchFolder: '$(Build.SourcesDirectory)/tests-output'
