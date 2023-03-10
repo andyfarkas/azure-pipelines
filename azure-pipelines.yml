@@ -12,4 +12,4 @@ variables:
   tag: '$(Build.BuildId)'
 
 steps:
-- script: docker run -rm andyfarkas/test-runner
+- script: docker run --rm andyfarkas/test-runner
