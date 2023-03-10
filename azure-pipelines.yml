@@ -18,4 +18,4 @@ variables:
 steps:
 - script: echo "I can run inside the container (it starts by default)"
   target:
-    container: builder
+    container: runner
